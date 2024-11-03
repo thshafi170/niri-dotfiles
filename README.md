@@ -8,7 +8,8 @@ If you install all of the below, my dots should run out of the box
 - swaync - notification management
 - walker - stylish app launcher
 - pantheon-agent-polkit - the elementary os policy kit, maintains gtk styling and restricts its height & width automatically
-- waybar - adds a taskbar
+- waybar - adds a top bar
+- wlr/taskbar - adds an app bar
 - wl-color-picker - adds a color picker
 - grimblast - screenshot utility
 - mixxc - a pretty simple audio mixer
@@ -17,7 +18,14 @@ If you install all of the below, my dots should run out of the box
 - xwayland-satellite
 - waypaper-engine - swww gui manager
 
-# Future Projects
+# Theming
+The gtk theme I am using is sweet, and the icon theme I'm using is Lucrezia Dark
+
+# Attributions
+- Quadpine's Rose theme for Walker - I do plan to develop my own sweet theme, and abenz1267 has plans for theme distribution, but I massively prefer this to any included themes, so for now it's included in the theme folder.
+- Nebulosa2007's niri waybar config - it forms the basis for the waybar, I just tinkered with it.
+
+# Things I need and may develop
 Alongside the apps I've already found and am looking for, I'm also hoping to build a few myself.
 
 ## A graphical user interface for configuring the Niri json file
