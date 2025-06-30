@@ -1,0 +1,103 @@
+window#waybar {
+    background-color: transparent;
+    color: #cdd6f4;
+    transition-property: background-color;
+    transition-duration: .5s;
+    border-radius: 12px;
+}
+
+* {
+	font-family: "AdwaitaMono Nerd Font";
+	font-size: 10pt;
+}
+
+#workspaces {
+  margin-top: 2px;
+  margin-left: 2px;
+  background-color: #1e1e2e;
+  border-radius: 12px 0px 0px 12px;
+}
+
+#taskbar {
+  margin-top: 2px;
+  background-color: #1e1e2e;
+  border-radius: 0px 12px 12px 0px;
+  padding-right: 12px;
+}
+
+#clock {
+  background-color: #1e1e2e;
+  border-radius: 12px;
+  margin-top: 2px;
+}
+
+#workspaces button {
+    padding: 4px;
+    background-color: transparent;
+    border-radius: 16px;
+    border: 6px #f5c2e7;
+    font-weight: 800;
+    color: #a6adc8; 
+}
+
+#workspaces button.urgent {
+  color: #fab387;
+}
+
+#workspaces button:hover {
+    background: rgba(69, 71, 90, 0.65);
+    color: #cdd6f4;
+    border: 12px #f5c2e7;
+    transition: none;
+}
+
+#workspaces button.focused {
+    color: #f5c2e7;
+    border: 12px #f5c2e7;
+}
+
+label.module {
+    padding: 0 10px 0 10px;
+}
+
+box.module button:hover {
+	box-shadow: none;
+	outline: none;
+	font-style: normal;
+	text-shadow: none;
+}
+
+#tray {
+	padding: 0 0 0 16;
+  border-radius: 12px 0px 0px 12px;
+  margin-top: 2px;
+  background-color: #1e1e2e;
+}
+
+menu {
+  background-color: #181825;
+  color: #cdd6f4;
+  border: 1px solid #494d64;
+  padding: 6px;
+  border-radius: 12px;
+}
+
+#tray menu menuitem:hover {
+  background-color: #1e1e2e;
+  color: #f5c2e7;
+  border-radius: 5px;
+}
+
+#window {
+  font-weight: 800;
+  padding: 0 8 0 8;
+}
+
+#pulseaudio {
+  font-size: 32px;
+  margin-top: 2px;
+  margin-right: 2px;
+  background-color: #1e1e2e;
+  border-radius: 0px 12px 12px 0px;
+  padding-left: 0px;
+}
