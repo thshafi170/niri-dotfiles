@@ -29,7 +29,7 @@ if [ "$IS_NIXOS" -eq 0 ]; then
     fi
 
     echo "Installing packages..."
-    sudo paru -S --needed --noconfirm \
+    paru -S --needed --noconfirm \
         niri \
         kcalc \
         ghostty \
