@@ -8,6 +8,22 @@ command_exists() {
     command -v "$1" >/dev/null 2>&1
 }
 
+# Detect NixOS and Arch Linux
+if [ -f /etc/os-release ]; then
+    . /etc/os-release
+    if [[ "$ID" == "nixos" ]]; then
+        echo "Error: This script does not support NixOS."
+        exit 1
+    fi
+    if [[ "$ID" != "arch" && "$ID_LIKE" != *"arch"* ]]; then
+        echo "Error: This script only supports Arch Linux and its derivatives."
+        exit 1
+    fi
+else
+    echo "Error: Cannot detect operating system."
+    exit 1
+fi
+
 # Check if paru is installed
 if ! command_exists paru; then
     echo "Error: paru is not installed. Please install paru first."
@@ -16,7 +32,7 @@ fi
 
 # Install packages
 echo "Installing packages..."
-paru -S --needed --noconfirm \
+sudo paru -S --needed --noconfirm \
     niri \
     kcalc \
     ghostty \
@@ -24,7 +40,7 @@ paru -S --needed --noconfirm \
     dolphin \
     kf6-servicemenus-rootactions \
     hyprpicker \
-    walker-bin \
+    walker \
     swaylock \
     swaync \
     waybar \
@@ -54,6 +70,7 @@ fi
 # Copy autostart files
 echo "Copying autostart files..."
 if [ -d "./autostart" ]; then
+    sudo mkdir -p /etc/xdg/autostart
     sudo cp -rf ./autostart/* /etc/xdg/autostart/
     echo "Autostart files copied to /etc/xdg/autostart/"
 else
