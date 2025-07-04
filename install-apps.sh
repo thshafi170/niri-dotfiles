@@ -22,9 +22,9 @@ paru -S --needed --noconfirm \
     ghostty \
     firefox \
     dolphin \
-    kde-servicemenus-rootactions \
+    kf6-servicemenus-rootactions \
     hyprpicker \
-    walker \
+    walker-bin \
     swaylock \
     swaync \
     waybar \
