@@ -1,17 +1,7 @@
 [Desktop Entry]
-Comment[en_AU]=
-Comment=
-Exec=/usr/bin/waypaper --restore
-GenericName[en_AU]=
-GenericName=
-Icon=system-run
-MimeType=
-Name[en_AU]=waypaper
+Type=Application
 Name=waypaper
-Path=
+Exec=/usr/bin/waypaper --restore
+Icon=system-run
 StartupNotify=true
 Terminal=false
-TerminalOptions=
-Type=Application
-X-KDE-SubstituteUID=false
-X-KDE-Username=

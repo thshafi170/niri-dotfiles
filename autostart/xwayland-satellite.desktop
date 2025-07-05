@@ -1,17 +1,8 @@
 [Desktop Entry]
-Comment[en_AU]=
+Name=xwayland-satellite
 Comment=
 Exec=/usr/bin/xwayland-satellite :12
-GenericName[en_AU]=
-GenericName=
 Icon=system-run
-MimeType=
-Name[en_AU]=xwayland-satellite
-Name=xwayland-satellite
-Path=
+Type=Application
 StartupNotify=true
 Terminal=false
-TerminalOptions=
-Type=Application
-X-KDE-SubstituteUID=false
-X-KDE-Username=

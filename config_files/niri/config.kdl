@@ -2,18 +2,11 @@
 //    focus-follows-mouse
 // }
 
-output "DP-1" {
-    mode "1920x1080@164.997"
+output "eDP-1" {
+    mode "1920x1080@60.000"
     position x=0 y=0
 }
-output "DP-2" {
-    mode "3440x1440@165.0"
-    position x=1920 y=0
-}
-output "HDMI-A-2" {
-    mode "2560x1600@59.94"
-    position x=2424 y=1440
-}
+
 layout {
     gaps 8
     center-focused-column "never"
@@ -80,16 +73,15 @@ window-rule {
 
 binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
-    Mod+T { spawn "ghostty"; }
+    Mod+T { spawn "kitty"; }
     Mod+X { spawn "firefox"; }
-    Mod+E { spawn "dolphin"; }
+    Mod+E { spawn "nemo"; }
     Mod+P { spawn "hyprpicker" "-a"; }
     Super+Alt+L { spawn "swaylock"; }
    XF86AudioRaiseVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1+"; }
     XF86AudioLowerVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1-"; }
     XF86AudioMute        allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SINK@" "toggle"; }
     XF86AudioMicMute     allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SOURCE@" "toggle"; }
-    XF86Launch7 { spawn "kcalc"; }
 
     Mod+Q { close-window; }
     Mod+S { spawn "sh" "-c" "walker --theme cat_grid --modules applications,runner,clipboard,finder,calculator"; }
